@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     while(1)
     {
         printf("지역이름 입력 : ");
-        fgets(buf_in, 255,stdin);
+        fgets(buf_in, 255, stdin);
 
         buf_in[strlen(buf_in) - 1] = '0';
         write(client_sockfd, buf_in, 255);
@@ -55,8 +55,8 @@ int main(int argc, char **argv)
         while(1)
         {
             read(client_sockfd, buf_get, 255);
-		printf("|");
-            printf("%s", buf_get);
+	//printf("|");
+        //  printf("%s", buf_get);
             if (strncmp(buf_get, "end", 3) == 0)
                 break;
 	
