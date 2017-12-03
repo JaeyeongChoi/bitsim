@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 
     int client_len;
     int client_sockfd;
+    double mtime;
 
     FILE *fp_in;
     char buf_in[255];
@@ -44,6 +45,8 @@ int main(int argc, char **argv)
     {
         printf("지역이름 입력 : ");
         fgets(buf_in, 255, stdin);
+	mtime= 5;
+	sleep(mtime);
 
         buf_in[strlen(buf_in) - 1] = '0';
         write(client_sockfd, buf_in, 255);
